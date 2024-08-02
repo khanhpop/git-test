@@ -1,0 +1,229 @@
+// Định nghĩa biến
+$border-color: #ccc;
+$primary-color: #f9f9f9;
+$background-color: #ffffff;
+$text-color: rgba(234, 82, 5, 0.933);
+$placeholder-color: #999;
+$button-color: #2c2d2e;
+$button-hover-color: #121312;
+$highlight-color: rgba(238, 200, 10, 0.91);
+$legend-color: rgba(234, 102, 7, 0.9098039216);
+// Body
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+// Container cho form
+.form-container {
+  background-color: $background-color;
+  border: 0px solid $border-color;
+  border-radius: 5%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 80%;
+}
+
+// Fieldset
+fieldset {
+  color:$text-color ;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5%;
+
+  &:nth-of-type(2) {
+    margin-top: -85px;
+
+    legend {
+      margin-bottom: -5px;
+      margin-left: -9px;
+    }
+  }
+
+  &:first-of-type legend {
+    margin-left: -9px;
+  }
+
+  &:last-of-type {
+    margin-top: -60px;
+    width: 488px;
+  }
+}
+
+// Label
+label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  color: $text-color;
+  border-radius: 10%;
+  white-space: nowrap;
+}
+
+// Input Group
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5%;
+  position: relative;
+
+  label {
+    width: auto;
+    margin-right: 10px;
+  }
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $placeholder-color;
+    font-size: 18px;
+  }
+}
+
+// Inputs and Selects
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input-group input[type="tel"],
+select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 40px;
+  color: $placeholder-color;
+  font-style: italic;
+
+  &::placeholder {
+    color: $placeholder-color;
+    font-style: italic;
+  }
+}
+
+// Dob và Gender Container
+.dob-gender-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// Dob Container
+.dob-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .input-group input[type="text"] {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    font-size: 13px;
+    margin-right: 5px;
+    margin-top: 4px;
+  }
+}
+
+// Gender Container
+.gender-container {
+  width: 50%;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  .gender-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    margin-top: 4px;
+    width: 100%;
+    height: 140px;
+  }
+}
+
+// Gender Option và Payment Option
+.gender-option,
+.payment-option {
+  border: 1px solid $border-color;
+  padding: 10px;
+  border-radius: 3px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  height: 55px;
+
+  &.selected {
+    background-color: $highlight-color;
+  }
+
+  &:not(.selected) {
+    background-color: #ddd;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+}
+
+// Payment Options
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Card Details
+.card-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    select {
+      width: 50%;
+      margin-left: 10px;
+      height: 40px;
+      padding: 10px;
+    }
+  }
+}
+
+// Submit Button
+input[type="submit"] {
+  background-color: $button-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+}

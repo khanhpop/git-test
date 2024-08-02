@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #ffffff;
+  border: 0px solid #ccc;
+  border-radius: 5%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 80%;
+}
+
+fieldset {
+  color: rgba(234, 82, 5, 0.933);
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5%;
+}
+fieldset:nth-of-type(2) {
+  margin-top: -85px;
+}
+fieldset:nth-of-type(2) legend {
+  margin-bottom: -5px;
+  margin-left: -9px;
+}
+fieldset:first-of-type legend {
+  margin-left: -9px;
+}
+fieldset:last-of-type {
+  margin-top: -60px;
+  width: 488px;
+}
+
+label {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  color: rgba(234, 82, 5, 0.933);
+  border-radius: 10%;
+  white-space: nowrap;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5%;
+  position: relative;
+}
+.input-group label {
+  width: auto;
+  margin-right: 10px;
+}
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 18px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+.input-group input[type=tel],
+select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 40px;
+  color: #999;
+  font-style: italic;
+}
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=password]::placeholder,
+.input-group input[type=tel]::placeholder,
+select::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.dob-gender-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dob-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.dob-container label {
+  margin-bottom: 5px;
+}
+.dob-container .input-group input[type=text] {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  font-size: 13px;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.gender-container {
+  width: 50%;
+}
+.gender-container label {
+  margin-bottom: 5px;
+}
+.gender-container .gender-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  margin-top: 4px;
+  width: 100%;
+  height: 140px;
+}
+
+.gender-option,
+.payment-option {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  height: 55px;
+}
+.gender-option.selected,
+.payment-option.selected {
+  background-color: rgba(238, 200, 10, 0.91);
+}
+.gender-option:not(.selected),
+.payment-option:not(.selected) {
+  background-color: #ddd;
+}
+.gender-option input[type=radio],
+.payment-option input[type=radio] {
+  display: none;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11px;
+}
+.card-details .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card-details .input-group select {
+  width: 50%;
+  margin-left: 10px;
+  height: 40px;
+  padding: 10px;
+}
+
+input[type=submit] {
+  background-color: #2c2d2e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+input[type=submit]:hover {
+  background-color: #121312;
+}
+
+/*# sourceMappingURL=test.css.map */

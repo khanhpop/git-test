@@ -1,0 +1,66 @@
+.info-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alo {
+  color: #090101;
+  background-color: rgb(252, 241, 241);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-field {
+  margin-bottom: 15px;
+}
+
+.info-field label {
+  font-weight: bold;
+}
+
+.info-field p {
+  margin: 5px 0 0 0;
+  padding: 10px;
+  border: 1px solid #a41e1e;
+  border-radius: 4px;
+  background-color: #3d2626;
+}
+
+.results-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #c0bebe;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.info-field {
+  margin-bottom: 15px;
+}
+.info-field label {
+  font-weight: bold;
+}
+.info-field p {
+  margin: 5px 0 0 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=test2.css.map */

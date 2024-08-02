@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+    <link rel="stylesheet" href="test2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .alo {
+            background-color: lightgrey;
+            padding: 20px;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="results-container " id="resultsContainer">
+
+        <h2 class="wave-effect">Thông tin người dùng</h2>
+        <p><strong>Full Name:</strong> <span id="resultFullName"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="resultDOB"></span></p>
+        <p><strong>Gender:</strong> <span id="resultGender"></span></p>
+        <p><strong>Payment Method:</strong> <span id="resultPaymentMethod"></span></p>
+        <p><strong>Card Number:</strong> <span id="resultCardNumber"></span></p>
+        <p><strong>Card Expiry:</strong> <span id="resultCardExpiry"></span></p>
+    </div>
+
+    <div class="alo">
+        <h2 class="wave-effect">aaaaaaaaaaaaa</h2>
+        <p><strong>Address:</strong> <span id="resultAddress"></span></p>
+        <p><strong>Phone:</strong> <span id="resultPhone"></span></p>
+    </div>
+    <script>
+        // Lấy dữ liệu từ localStorage và hiển thị
+        document.getElementById('resultFullName').textContent = localStorage.getItem('fullName');
+        document.getElementById('resultEmail').textContent = localStorage.getItem('email');
+        document.getElementById('resultDOB').textContent = localStorage.getItem('dob');
+        document.getElementById('resultGender').textContent = localStorage.getItem('gender');
+        document.getElementById('resultPaymentMethod').textContent = localStorage.getItem('paymentMethod');
+        document.getElementById('resultCardNumber').textContent = localStorage.getItem('cardNumber');
+        document.getElementById('resultCardExpiry').textContent = localStorage.getItem('cardExpiry');
+    </script>
+</body>
+
+</html>

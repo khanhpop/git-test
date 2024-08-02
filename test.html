@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="test.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body class="body">
+    <div class="form-container">
+        <form id="infoForm">
+            <fieldset>
+                <legend>Account</legend>
+
+                <div class="input-group">
+
+                    <i class="fas fa-user"></i> <!-- Biểu tượng người dùng -->
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i> <!-- Biểu tượng email -->
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i> <!-- Biểu tượng khóa -->
+                    <input type="password" id="password" name="password" placeholder="Password">
+                </div>
+
+            
+                  
+
+                <div class="dob-gender-container">
+                    <div class="dob-container">
+                        <label class="dob-label" for="dobDay">Date of Birth:</label>
+                        <div class="input-group">
+                            <input type="text" id="day" name="day" placeholder="DD">
+                            <input type="text" id="month" name="month" placeholder="MM">
+                            <input type="text" id="year" name="year" placeholder="YYYY">
+                        </div>
+                    </div>
+
+                    <div class="gender-container">
+                        <label class="gender-label">Gender:</label>
+                        <div class="gender-options">
+                            <div class="gender-option" id="maleOption">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="gender-option" id="femaleOption">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Details</legend>
+                <div class="payment-options">
+                    <div class="payment-option" id="creditCardOption">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+                        <label for="creditCard">Credit Card</label>
+                    </div>
+                    <div class="payment-option" id="paypalOption">
+                        <i class="fa-brands fa-cc-paypal"></i>
+                        <input type="radio" id="paypal" name="paymentMethod" value="paypal">
+                        <label for="paypal">Paypal</label>
+                    </div>
+                </div>
+                <div class="card-details">
+                    <div class="input-group card-number">
+                        <i class="fa-brands fa-cc-visa"></i>
+                        <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                    </div>
+                    <div class="input-group card-cvc">
+                        <i class="fa-brands fa-cc-paypal"></i>
+                        <input type="text" id="cardCvc" name="cardCvc" placeholder="Card CVC">
+                        <select id="expiryMonth" name="expiryMonth">
+                            <option value="">Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="expiryYear" name="expiryYear">
+                            <option value="">Year</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <div class="input-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+  
+    <script>
+          'use strict';
+        const paymentOptions = document.querySelectorAll('.payment-option');
+        const creditCardRadio = document.getElementById('creditCard');
+        const paypalRadio = document.getElementById('paypal');
+        const creditCardOption = document.getElementById('creditCardOption');
+        const paypalOption = document.getElementById('paypalOption');
+        document.addEventListener('DOMContentLoaded', function () {
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            const genderOptions = document.querySelectorAll('.gender-option');
+
+            paymentOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    this.querySelector('input[type="radio"]').checked = true;
+                });
+            });
+
+            genderOptions.forEach(option => {
+                option.addEventListener('click', function () {
+                    genderOptions.forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    this.querySelector('input[type="radio"]').checked = true;
+                });
+            });
+        });
+
+        const maleRadio = document.getElementById('male');
+        const femaleRadio = document.getElementById('female');
+        const maleOption = document.getElementById('maleOption');
+        const femaleOption = document.getElementById('femaleOption');
+        paymentOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                this.querySelector('input[type="radio"]').checked = true;
+            });
+
+            creditCardRadio.addEventListener('change', function () {
+                creditCardOption.classList.add('selected');
+                paypalOption.classList.remove('selected');
+            });
+
+            paypalRadio.addEventListener('change', function () {
+                paypalOption.classList.add('selected');
+                creditCardOption.classList.remove('selected');
+            });
+
+            maleRadio.addEventListener('change', function () {
+                maleOption.classList.add('selected');
+                femaleOption.classList.remove('selected');
+            });
+
+            femaleRadio.addEventListener('change', function () {
+                femaleOption.classList.add('selected');
+                maleOption.classList.remove('selected');
+
+            });
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('infoForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Ngăn form gửi dữ liệu theo cách thông thường
+
+                // Lấy giá trị của các trường
+                const fullName = document.getElementById('fullName').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const day = document.getElementById('day').value;
+                const month = document.getElementById('month').value;
+                const year = document.getElementById('year').value;
+                const gender = document.querySelector('input[name="gender"]:checked').value;
+                const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+                const cardNumber = document.getElementById('cardNumber').value;
+                const cardCvc = document.getElementById('cardCvc').value;
+                const expiryMonth = document.getElementById('expiryMonth').value;
+                const expiryYear = document.getElementById('expiryYear').value;
+                const terms = document.getElementById('terms').checked;
+
+                // Tạo một object chứa các giá trị
+                const formData = {
+                    fullName,
+                    email,
+                    password,
+                    dateOfBirth: `${day}/${month}/${year}`,
+                    gender,
+                    paymentMethod,
+                    cardNumber,
+                    cardCvc,
+                    expiryDate: `${expiryMonth}/${expiryYear}`,
+                    terms
+                };
+                // Lưu dữ liệu vào localStorage
+                localStorage.setItem('fullName', document.getElementById('fullName').value);
+                localStorage.setItem('email', document.getElementById('email').value);
+                localStorage.setItem('dob', `${document.getElementById('day').value}/${document.getElementById('month').value}/${document.getElementById('year').value}`);
+                localStorage.setItem('gender', document.querySelector('input[name="gender"]:checked').value);
+                localStorage.setItem('paymentMethod', document.querySelector('input[name="paymentMethod"]:checked').value);
+                localStorage.setItem('cardNumber', document.getElementById('cardNumber').value);
+                localStorage.setItem('cardExpiry', `${document.getElementById('expiryMonth').value}/${document.getElementById('expiryYear').value}`);
+
+                // Chuyển hướng sang test2.html
+                window.location.href = 'test2.html';
+
+            });
+        });
+    </script>
+      <script>
+       var result = confirm("Bạn có chắc chắn muốn tiếp tục?");
+if (result) {
+    console.log("Người dùng đã chọn OK.");
+} else {
+    console.log("Người dùng đã chọn Cancel.");
+}
+
+      </script>
+    
+</body>
+
+</html>

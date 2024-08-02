@@ -1,0 +1,93 @@
+// Biến
+
+
+$max-width: 600px;
+$background-color: #c0bebe;
+$border-color: #ccc;
+$border-radius: 8px;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+$font-size-h2: 1.5em;
+$padding: 20px;
+$margin-bottom: 15px;
+$info-field-margin: 5px 0 0 0;
+$info-field-padding: 10px;
+$info-field-background-color: #fff;
+
+
+.info-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@mixin style ($text-color, $bg-color){
+color: $text-color;
+background-color: $bg-color
+
+}
+.alo{
+  @include style(#090101, rgb(252, 241, 241))
+
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.info-field {
+  margin-bottom: 15px;
+}
+
+.info-field label {
+  font-weight: bold;
+}
+
+.info-field p {
+  margin: 5px 0 0 0;
+  padding: 10px;
+  border: 1px solid #a41e1e;
+  border-radius: 4px;
+  background-color: #3d2626;
+}
+
+
+
+// Info Container
+.results-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $padding; 
+  background-color: $background-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+// Heading 2
+h2 {
+  font-size: $font-size-h2;
+  margin-bottom: 20px;
+
+}
+
+// Info Field
+.info-field {
+  margin-bottom: $margin-bottom;
+
+  label {
+    font-weight: bold;
+  }
+
+  p {
+    margin: $info-field-margin;
+    padding: $info-field-padding;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $info-field-background-color;
+  }
+}
+
